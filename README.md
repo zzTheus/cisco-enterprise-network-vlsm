@@ -1,14 +1,18 @@
-Infraestrutura de Rede Corporativa com VLSM — Cisco Packet Tracer
+# 🌐 Infraestrutura de Rede Corporativa com VLSM — Cisco Packet Tracer
 
 Projeto prático de planejamento, segmentação e implementação de uma infraestrutura de rede corporativa utilizando **VLSM (Variable Length Subnet Mask)**, roteamento inter-redes e serviços essenciais no **Cisco Packet Tracer**.
 
-Topologia da Rede
+---
+
+## 📌 Topologia da Rede
+
+![Topologia de Rede](<Infraestrutura + HTTP e DNS funcionando.png>)
 
 A rede foi projetada para atender a diferentes setores de uma organização, garantindo isolamento, eficiência no uso de endereçamento IPv4 e conectividade com a infraestrutura interna.
 
 ---
 
-Plano de Endereçamento (VLSM)
+## 📊 Plano de Endereçamento (VLSM)
 
 Bloco base utilizado: `172.16.0.0/16`
 
@@ -21,22 +25,32 @@ Bloco base utilizado: `172.16.0.0/16`
 
 ---
 
-Tecnologias e Serviços Implementados
+## ⚙️ Tecnologias e Serviços Implementados
 
-Roteamento Inter-VLAN / Inter-Subredes: Roteador central Cisco 2811 interligando os diferentes segmentos de rede via interfaces FastEthernet.
-Serviço DHCP: Distribuição dinâmica de IPs para os hosts das redes locais e Wi-Fi.
-Serviço DNS: Resolução de nomes interna para a intranet corporativa (`http://www.empresa.com`).
-Serviço Web (HTTP): Hospedagem de página web interna no Data Center corporativo acessível pelos hosts de todas as sub-redes.
-Ponto de Acesso Sem Fio: Roteador Wireless configurado para atender dispositivos móveis na rede de visitantes.
+* **Roteamento Inter-VLAN / Inter-Subredes:** Roteador central Cisco 2811 interligando os segmentos de rede via interfaces FastEthernet.
+* **Serviço DHCP:** Distribuição dinâmica de IPs para os hosts locais e rede sem fio.
+* **Serviço DNS:** Resolução de nomes interna para a intranet corporativa (`http://www.empresa.com`).
+* **Serviço Web (HTTP):** Hospedagem de página corporativa acessível por todas as sub-redes.
+* **Ponto de Acesso Sem Fio:** Roteador Wireless configurado para atender dispositivos móveis na rede de visitantes.
 
 ---
 
-Validação e Testes (Nas imagens)
+## 🧪 Validação e Testes
 
-1. Tabela de Roteamento (Cisco IOS)
+### 1. Tabela de Roteamento (Cisco IOS)
 Verificação das rotas diretamente conectadas e do particionamento variável de sub-redes via CLI:
 
-2. Teste de Conectividade (ICMP & Resolução ARP)
+![Show IP Route](<Teste de Roteamento.png>)
+
+### 2. Teste de Conectividade (ICMP & Resolução ARP)
 Teste de conectividade inter-redes executado via terminal de host:
 
-#Nota técnica: A primeira perda de pacote (Request timed out) observada no comando ping é o comportamento padrão do protocolo ARP (Address Resolution Protocol), que precisa resolver o endereço MAC do próximo salto antes de encapsular e encaminhar os pacotes ICMP seguintes.
+![Teste de Ping](<Teste de Conectividade Interna.png>)
+
+> **Nota técnica:** A primeira perda de pacote (*Request timed out*) observada no comando `ping` é o comportamento padrão esperado do protocolo ARP (Address Resolution Protocol), que precisa resolver o endereço MAC do próximo salto antes de encapsular e encaminhar os pacotes ICMP seguintes.
+
+---
+
+## 📁 Arquivos do Projeto
+
+* `Trabalho Cisco Packet Tracer.pkt` — Topologia configurada e pronta para simulação.
