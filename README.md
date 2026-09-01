@@ -6,7 +6,7 @@ Projeto prático de planejamento, segmentação e implementação de uma infraes
 
 ## 📌 Topologia da Rede
 
-![Topologia de Rede](<Infraestrutura + HTTP e DNS funcionando.png>)
+![Topologia de Rede](<Infraestrutura + HTTP e DNS funcionando>)
 
 A rede foi projetada para atender a diferentes setores de uma organização, garantindo isolamento, eficiência no uso de endereçamento IPv4 e conectividade com a infraestrutura interna.
 
@@ -40,12 +40,12 @@ Bloco base utilizado: `172.16.0.0/16`
 ### 1. Tabela de Roteamento (Cisco IOS)
 Verificação das rotas diretamente conectadas e do particionamento variável de sub-redes via CLI:
 
-![Show IP Route](<Teste de Roteamento.png>)
+![Show IP Route](<Teste de Roteamento>)
 
 ### 2. Teste de Conectividade (ICMP & Resolução ARP)
 Teste de conectividade inter-redes executado via terminal de host:
 
-![Teste de Ping](<Teste de Conectividade Interna.png>)
+![Teste de Ping](<Teste de Conectividade Interna>)
 
 > **Nota técnica:** A primeira perda de pacote (*Request timed out*) observada no comando `ping` é o comportamento padrão esperado do protocolo ARP (Address Resolution Protocol), que precisa resolver o endereço MAC do próximo salto antes de encapsular e encaminhar os pacotes ICMP seguintes.
 
